@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+
+  <div class="controls">
+    <label>
+      Board Size:
+      <select id="boardSize">
+        <option value="3">3 x 3</option>
+        <option value="4">4 x 4</option>
+        <option value="5">5 x 5</option>
+      </select>
+    </label>
+
+    <label>
+      Mode:
+      <select id="mode">
+        <option value="pvp">Player vs Player</option>
+        <option value="ai">Player vs Computer</option>
+      </select>
+    </label>
+
+    <label>
+      Difficulty:
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </label>
+
+    <button id="restart">Restart</button>
+  </div>
+
+  <div class="scoreboard">
+    <span id="playerXScore">X: 0</span> | 
+    <span id="playerOScore">O: 0</span>
+  </div>
+
+  <div class="board" id="board"></div>
+
+  <div class="popup" id="popup">
+    <h2 id="winnerMsg"></h2>
+    <button onclick="closePopup()">OK</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
